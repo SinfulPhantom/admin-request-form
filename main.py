@@ -5,11 +5,13 @@ from os import getenv
 
 load_dotenv()
 token = getenv("TOKEN")
+guild_token = getenv("GUILD")
+
 
 intents = discord.Intents.default()
 intents.members = True
 
-GUILD = discord.Object(id=978803693820452874)
+GUILD = discord.Object(id=guild_token)
 
 
 class Client(discord.Client):
